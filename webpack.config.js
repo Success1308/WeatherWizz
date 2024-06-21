@@ -41,6 +41,17 @@ module.exports = {
         test: /\.ico$/i,
         type: "asset/resource",
       },
+
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
     ],
   },
 };
