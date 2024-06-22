@@ -1,11 +1,12 @@
-// dynamicComponents.js
+// dom.js
+
 export function createLogo() {
   const logo = document.createElement("div");
   logo.className = "logo";
   return logo;
 }
 
-export function createWeatherHeader() {
+export function createWeatherHeader(updateWeatherUnits) {
   const weatherHeader = document.createElement("div");
   weatherHeader.className = "weather__header";
 
@@ -27,12 +28,18 @@ export function createWeatherHeader() {
   weatherUnits.className = "weather__units";
 
   const unitCelsius = document.createElement("span");
-  unitCelsius.className = "weather_unit_celsius";
+  unitCelsius.className = "weather_unit_celsius active";
   unitCelsius.innerHTML = "&#176C";
+  unitCelsius.addEventListener("click", () => {
+    updateWeatherUnits("metric");
+  });
 
   const unitFahrenheit = document.createElement("span");
   unitFahrenheit.className = "weather_unit_farenheit";
   unitFahrenheit.innerHTML = "&#176F";
+  unitFahrenheit.addEventListener("click", () => {
+    updateWeatherUnits("imperial");
+  });
 
   weatherUnits.appendChild(unitCelsius);
   weatherUnits.appendChild(unitFahrenheit);

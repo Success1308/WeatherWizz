@@ -1,9 +1,9 @@
 // weatherAPI.js
-const API_KEY = "64f60853740a1ee3ba20d0fb595c97d5";
-const API_URL = "https://api.openweathermap.org/data/2.5/weather";
+const API_KEY = "b1089ba324104bd3a0d145553242006";
+const API_URL = "http://api.weatherapi.com/v1";
 
 export async function fetchWeatherData(city) {
-  const url = `${API_URL}?q=${city}&units=metric&appid=${API_KEY}`;
+  const url = `${API_URL}/current.json?key=${API_KEY}&q=${city}`;
 
   try {
     const response = await fetch(url);
@@ -14,6 +14,7 @@ export async function fetchWeatherData(city) {
     return data;
   } catch (error) {
     console.error("Error fetching weather data:", error);
+    alert("Please ensure the city name is correct.");
     return null;
   }
 }

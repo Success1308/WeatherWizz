@@ -1,77 +1,100 @@
-// main.js
+// index.js
+
 import "./style.css";
 import { createLogo, createWeatherHeader } from "./DOM.js";
 import { fetchWeatherData } from "./weatherAPI.js";
-import { createWeatherCard, createWeatherInfo } from "./weatherdata.js";
+import { createWeatherCard, createWeatherInfo } from "./weatherdataDOM.js";
 
 const mainContainer = document.querySelector(".main-container");
-
 const subContainer = document.createElement("div");
 subContainer.className = "container";
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const logo = createLogo();
-  subContainer.appendChild(logo);
-  const weatherHeader = createWeatherHeader();
+let currentCity = "new york";
+let currentUnit = "metric";
 
-  subContainer.appendChild(weatherHeader);
+document.addEventListener("DOMContentLoaded", initializeApp);
 
+async function initializeApp() {
+  subContainer.appendChild(createLogo());
+  subContainer.appendChild(createWeatherHeader(updateWeatherUnits));
   mainContainer.appendChild(subContainer);
 
+  setupEventListeners();
+
+  if (currentCity) {
+    await updateWeather(currentCity, currentUnit);
+  }
+}
+
+function setupEventListeners() {
   const searchForm = document.querySelector(".weather__search");
-  searchForm.addEventListener("click", handleSearch);
+  searchForm.addEventListener("submit", handleSearch);
 
   const searchInput = document.querySelector(".weather__searchform");
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
+      event.preventDefault();
       handleSearch(event);
     }
   });
+}
 
-  const initialCity = "new york";
-  if (initialCity) {
-    try {
-      const data = await fetchWeatherData(initialCity);
-      if (data) {
-        updateWeatherUI(data);
-      }
-    } catch (error) {
-      console.error("Error fetching initial weather data:", error);
-    }
-  }
-});
-
-async function handleSearch(event) {
-  event.preventDefault();
-  const searchInput = document.querySelector(".weather__searchform");
-  const city = searchInput.value.trim();
-  if (!city) return;
-
+async function updateWeather(city, unit) {
   try {
     const data = await fetchWeatherData(city);
     if (data) {
-      updateWeatherUI(data);
+      updateWeatherUI(data, unit);
+      toggleUnitActiveClass(unit);
     }
   } catch (error) {
     console.error("Error fetching weather data:", error);
   }
 }
 
-function updateWeatherUI(data) {
-  const weatherCARd = document.createElement("div");
-  weatherCARd.className = "cardContainer";
+async function handleSearch(event) {
+  event.preventDefault();
+  const searchInput = document.querySelector(".weather__searchform");
+  const city = searchInput.value.trim();
+  searchInput.value = "";
 
-  const weatherINfo = document.createElement("div");
-  weatherINfo.className = "weather__info";
+  if (city) {
+    currentCity = city;
+    await updateWeather(city, currentUnit);
+  }
+}
 
-  // Create weather card
-  const weatherCard = createWeatherCard(data);
-  weatherCARd.appendChild(weatherCard);
+async function updateWeatherUnits(unit) {
+  currentUnit = unit;
+  await updateWeather(currentCity, unit);
+}
 
-  // Create weather info
-  const weatherInfo = createWeatherInfo(data);
-  weatherINfo.appendChild(weatherInfo);
+function updateWeatherUI(data, unit) {
+  clearExistingWeatherElements();
 
-  subContainer.appendChild(weatherCARd);
-  subContainer.appendChild(weatherINfo);
+  const weatherCard = createWeatherCard(data, unit);
+  const weatherInfo = createWeatherInfo(data, unit);
+
+  subContainer.appendChild(weatherCard);
+  subContainer.appendChild(weatherInfo);
+}
+
+function clearExistingWeatherElements() {
+  const existingWeatherCard = subContainer.querySelector(".cardContainer");
+  const existingWeatherInfo = subContainer.querySelector(".weather__info");
+
+  if (existingWeatherCard) subContainer.removeChild(existingWeatherCard);
+  if (existingWeatherInfo) subContainer.removeChild(existingWeatherInfo);
+}
+
+function toggleUnitActiveClass(unit) {
+  const unitCelsius = document.querySelector(".weather_unit_celsius");
+  const unitFahrenheit = document.querySelector(".weather_unit_farenheit");
+
+  if (unit === "metric") {
+    unitCelsius.classList.add("active");
+    unitFahrenheit.classList.remove("active");
+  } else {
+    unitCelsius.classList.remove("active");
+    unitFahrenheit.classList.add("active");
+  }
 }
