@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const weatherHeader = createWeatherHeader();
 
   subContainer.appendChild(weatherHeader);
-  subContainer.appendChild(weather);
 
   mainContainer.appendChild(subContainer);
 
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  const initialCity = "toronto";
+  const initialCity = "new york";
   if (initialCity) {
     try {
       const data = await fetchWeatherData(initialCity);
@@ -59,9 +58,6 @@ async function handleSearch(event) {
 }
 
 function updateWeatherUI(data) {
-  const weatherContainer = document.querySelector(".weather__container");
-  weatherContainer.innerHTML = "";
-
   const weatherCARd = document.createElement("div");
   weatherCARd.className = "cardContainer";
 

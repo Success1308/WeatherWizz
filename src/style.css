@@ -260,13 +260,13 @@ body {
 
 .weather__card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: var(--cream);
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-  min-width: 14.3vw;
+  min-width: 12vw;
   flex-basis: calc(25% - 1rem);
   margin-bottom: 1rem;
 }
