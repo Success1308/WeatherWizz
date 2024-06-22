@@ -30,16 +30,14 @@ export function createWeatherHeader(updateWeatherUnits) {
   const unitCelsius = document.createElement("span");
   unitCelsius.className = "weather_unit_celsius active";
   unitCelsius.innerHTML = "&#176C";
-  unitCelsius.addEventListener("click", () => {
-    updateWeatherUnits("metric");
-  });
+  unitCelsius.addEventListener("click", () => updateWeatherUnits("metric"));
 
   const unitFahrenheit = document.createElement("span");
   unitFahrenheit.className = "weather_unit_farenheit";
   unitFahrenheit.innerHTML = "&#176F";
-  unitFahrenheit.addEventListener("click", () => {
-    updateWeatherUnits("imperial");
-  });
+  unitFahrenheit.addEventListener("click", () =>
+    updateWeatherUnits("imperial")
+  );
 
   weatherUnits.appendChild(unitCelsius);
   weatherUnits.appendChild(unitFahrenheit);
