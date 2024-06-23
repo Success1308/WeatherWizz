@@ -89,9 +89,8 @@ Let's work together to make WeatherWizz! If you have any questions or suggestion
 
 <h2>📷 Screenshots</h2>
 
-<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
-    <div style="text-align: center;">
-        <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/bdf48db4-e791-4f26-81df-7003d86cd068" alt="image" style="width: 70%; max-width: 70%; height: auto; margin-bottom: 20px;">
-        <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/53b386d4-8405-4ed0-8617-5af977e09919" alt="image" style="width: 29%; max-width: 29%; height: auto;">
-    </div>
+
+<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh; flex-direction: column;">
+    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/bdf48db4-e791-4f26-81df-7003d86cd068" alt="image" style="width: 70%; height: auto; margin-bottom: 20px;">
+    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/53b386d4-8405-4ed0-8617-5af977e09919" alt="image" style="width: 29%; height: auto;">
 </div>
