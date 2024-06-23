@@ -12,15 +12,12 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+
 input,
 button,
 textarea,
@@ -204,8 +201,8 @@ body {
 }
 
 .city {
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 5rem;
   letter-spacing: 1.2px;
   color: var(--red);
 }
@@ -217,7 +214,7 @@ body {
 }
 .card img {
   max-width: 11rem !important;
-  height: auto !important;
+  height: 11rem !important;
 }
 .temp {
   font-size: 4rem;
@@ -549,9 +546,15 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px) {
   body {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    min-height: 90vh;
+    min-width: 90vw;
   }
 
   .logo {
@@ -623,8 +626,12 @@ body {
   .temp {
     font-size: 3rem;
   }
-  .minmaxContainer {
-    width: 50%;
+  .weather__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
   }
   .weather__card {
     min-width: 70vw;
@@ -632,10 +639,6 @@ body {
   }
   .weather__card i {
     font-size: 2rem;
-  }
-  .min,
-  .max {
-    padding: 0px 30px;
   }
   .weather__card p {
     font-size: 1.2rem;
