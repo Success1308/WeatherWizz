@@ -21,6 +21,11 @@ async function initializeApp() {
 
   setupEventListeners();
 
+  const storedCity = localStorage.getItem("weatherAppCity");
+  if (storedCity) {
+    currentCity = storedCity;
+  }
+
   if (currentCity) {
     await updateWeather(currentCity, currentUnit);
   }
@@ -61,6 +66,7 @@ async function handleSearch(event) {
     currentCity = city;
     await updateWeather(city, currentUnit);
   }
+  localStorage.setItem("weatherAppCity", currentCity);
 }
 
 async function updateWeatherUnits(unit) {
