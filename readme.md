@@ -28,13 +28,13 @@
 
 <h2>📷 Screenshots</h2>
 
-<p align="center">
-  <img src="Screenshot1_URL" width="600" height="400" alt="Screenshot 1">
-</p>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/bdf48db4-e791-4f26-81df-7003d86cd068" alt="image" style="width: 70%; height: 100%;">
+    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/53b386d4-8405-4ed0-8617-5af977e09919" alt="image" style="width: 29%; height: 5%;">
+</div>
 
-<p align="center">
-  <img src="Screenshot2_URL" width="600" height="400" alt="Screenshot 2">
-</p>
+
+
 
 <h2>✨ Features</h2>
 
