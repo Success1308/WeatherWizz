@@ -1,6 +1,6 @@
 // weatherAPI.js
 const API_KEY = "b1089ba324104bd3a0d145553242006";
-const API_URL = "http://api.weatherapi.com/v1";
+const API_URL = "https://api.weatherapi.com/v1";
 
 export async function fetchWeatherData(city) {
   const url = `${API_URL}/current.json?key=${API_KEY}&q=${city}`;
