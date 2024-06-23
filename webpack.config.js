@@ -48,6 +48,17 @@ module.exports = {
           },
         },
       },
+
+      {
+        test: /\.svg$/i,
+        type: "asset/resource",
+      },
     ],
+  },
+
+  resolve: {
+    alias: {
+      "@assets": path.resolve(__dirname, "src/assets"),
+    },
   },
 };
