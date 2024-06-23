@@ -15,10 +15,6 @@
   
   <li><strong>Detailed Weather Icons:</strong> Enhancing the user experience, the app features detailed weather icons that change dynamically based on the current weather conditions and time of day. These icons provide a quick visual representation of the weather forecast.</li>
   
-  <li><strong>Customizable Settings:</strong> Tailor your experience by choosing your preferred temperature unit. The app remembers your settings for future visits, providing a personalized weather viewing experience.</li>
-  
-  <li><strong>Educational Insights:</strong> Gain insights into weather patterns and conditions with every search. The app not only provides current weather but also enhances your understanding of meteorological data presentation.</li>
-</ul>
 
 <p>Explore the weather in your favorite cities with my weather application and stay informed wherever you go!</p>
 
