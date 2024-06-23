@@ -1,6 +1,6 @@
 <h1 align="center" id="title">WeatherWizz</h1>
 
-<p align="center"><img src="https://socialify.git.ci/Success1308/WeatherWizz/image?language=1&amp;owner=1&amp;name=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
+<p align="center"><img src="https://socialify.git.ci/Success1308/WeatherWizz/image?font=KoHo&language=1&name=1&owner=1&stargazers=1&theme=Light" alt="project-image"></p>
 
 <p id="description">Welcome to my weather application project! This web application leverages JavaScript and modern web technologies to provide real-time weather information at your fingertips. Here’s what you can expect:</p>
 
@@ -26,20 +26,8 @@
 
 [Check out the live demo here!](https://success1308.github.io/WeatherWizz/)
 
-<h2>📷 Screenshots</h2>
-
-<div style="display: flex; justify-content: center; align-items: center;">
-    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/bdf48db4-e791-4f26-81df-7003d86cd068" alt="image" style="width: 70%; height: 100%;">
-    <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/53b386d4-8405-4ed0-8617-5af977e09919" alt="image" style="width: 29%; height: 5%;">
-</div>
-
-
-
 
 <h2>✨ Features</h2>
-
-<!-- List some key features of your project -->
-
 <ul>
   <li>User-friendly interface</li>
   <li>Dynamic weather updates</li>
@@ -52,20 +40,60 @@
 
 <h2>🚀 Installation Steps</h2>
 
-<!-- Provide installation steps or commands here -->
+To install this project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Success1308/WeatherWizz.git
+
+2. Navigate into the project directory:
+
+   ```bash
+    cd WeatherWizz
+
+3. Install dependencies:
+
+    ```bash
+    npm install
 
 <h2>🤝 Contribution Guidelines</h2>
 
-<!-- Optional: Add contribution guidelines if applicable -->
+Contributions are welcome! To contribute to WeatherWizz, follow these steps:
+
+- Fork the repository.
+- Create a new branch (`git checkout -b feature/improvement`).
+- Make your changes.
+- Commit your changes (`git commit -am 'Add new feature'`).
+- Push to the branch (`git push origin feature/improvement`).
+- Create a new Pull Request.
 
 <h2>💻 Technologies Used</h2>
 
-<!-- Optional: List technologies used in your project -->
+<ul>
+  <li>⚙️ JavaScript</li>
+  <li>🌐 HTML/CSS</li>
+  <li>🔄 Async API calls</li>
+  <li>📱 Responsive design techniques</li>
+  <li>📦 npm (Node Package Manager)</li>
+  <li>🔧 Webpack (Module Bundler)</li>
+</ul>
 
-<h2>📝 License</h2>
 
-<!-- Optional: Specify the license under which your project is distributed -->
+## License
 
-<h2>📞 Support</h2>
+WeatherWizz is licensed under the MIT License. See the LICENSE file for more information.
 
-<!-- Optional: Provide support information, if applicable -->
+## Contact
+
+Let's work together to make WeatherWizz! If you have any questions or suggestions, feel free to open an issue or submit a pull request. Happy coding!
+
+<h2>📷 Screenshots</h2>
+
+<div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <div style="display: flex; justify-content: center; align-items: center; flex: 1;style="max-width: 70%; height: auto;">
+        <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/bdf48db4-e791-4f26-81df-7003d86cd068" alt="image" ">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; flex: 1;style="max-width: 29%; height: auto;">
+        <img src="https://github.com/Success1308/WeatherWizz/assets/167788445/53b386d4-8405-4ed0-8617-5af977e09919" alt="image" ">
+    </div>
+</div>
