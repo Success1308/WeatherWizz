@@ -47,7 +47,7 @@ export function createWeatherInfo(data, unit) {
 
   const realFeel = createWeatherInfoCard(
     "fa-temperature-full",
-    "Real Feel",
+    "Feels Like",
     unit === "metric"
       ? `${Math.round(data.current.feelslike_c)}°C`
       : `${Math.round(data.current.feelslike_f)}°F`
