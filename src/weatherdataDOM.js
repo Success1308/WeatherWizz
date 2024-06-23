@@ -11,7 +11,7 @@ export function createWeatherCard(data, unit) {
 
   const city = document.createElement("p");
   city.className = "city";
-  city.textContent = `${data.location.name}`;
+  city.textContent = `${data.location.name} `;
   card.appendChild(city);
 
   const weather = document.createElement("p");
