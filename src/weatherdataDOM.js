@@ -21,10 +21,10 @@ export function createWeatherCard(data, unit) {
 
   const icon = document.createElement("img");
   const iconUrl = updateCurrentWeatherIcon(data);
-  console.log(iconUrl);
+  icon.style.width = "50px";
+  icon.style.height = "50px";
   icon.src = iconUrl;
   icon.alt = data.current.condition.text;
-  console.log("Icon alt text:", icon.alt);
   card.appendChild(icon);
 
   const temp = document.createElement("p");

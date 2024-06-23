@@ -7,6 +7,5 @@ const getIconUrl = (icon) => {
 export const updateCurrentWeatherIcon = (weather) => {
   const { condition } = weather.current;
   const iconUrl = getIconUrl(condition.icon);
-  console.log(iconUrl);
   return iconUrl;
 };
