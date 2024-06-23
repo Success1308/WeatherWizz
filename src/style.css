@@ -216,8 +216,8 @@ body {
   color: var(--red);
 }
 .card img {
-  max-width: 11rem;
-  height: auto;
+  max-width: 11rem !important;
+  height: auto !important;
 }
 .temp {
   font-size: 4rem;
