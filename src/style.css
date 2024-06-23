@@ -215,51 +215,20 @@ body {
   font-size: 1.2rem;
   color: var(--red);
 }
-
-.weather-1 {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: var(--red);
+.svg-container {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
+.svg-icon {
+  width: 100%;
+  height: 100%;
+}
 .temp {
   font-size: 4rem;
   color: var(--red);
   font-weight: bold;
-}
-
-.minmaxContainer {
-  width: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--red);
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-.min,
-.max {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 10px;
-}
-
-.max {
-  border-left: 2px solid var(--red);
-}
-
-.maxHeading,
-.minHeading {
-  color: var(--red);
-}
-
-.maxTemp,
-.minTemp {
-  color: var(--red);
 }
 
 /* Weather info cards */
