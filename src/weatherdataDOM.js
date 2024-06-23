@@ -1,5 +1,7 @@
 // weatherdataDOM.js
 
+import { getWeatherIcon } from "./weatherIcons";
+
 export function createWeatherCard(data, unit) {
   const weatherCard = document.createElement("div");
   weatherCard.className = "cardContainer";
@@ -17,12 +19,11 @@ export function createWeatherCard(data, unit) {
   weather.textContent = data.current.condition.text.toUpperCase();
   card.appendChild(weather);
 
-  const icon = document.createElement("img");
-  icon.className = "weather-icon";
-  icon.src = data.current.condition.icon.startsWith("//")
-    ? `https:${data.current.condition.icon}`
-    : data.current.condition.icon;
-  icon.alt = data.current.condition.text;
+  const icon = document.createElement("i");
+  icon.className = getWeatherIcon(
+    data.current.condition.text,
+    data.current.is_day
+  );
   card.appendChild(icon);
 
   const temp = document.createElement("p");
